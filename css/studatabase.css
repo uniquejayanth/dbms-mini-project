@@ -1,0 +1,225 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+	@font-face {
+	font-family: DM Sans;
+	src: url('./fonts/DMSans-Regular.ttf')format('truetype');
+	font-weight: normal;
+	font-style: normal;
+	}
+
+/*NAV*/
+.image{
+	float: left;
+	padding-top: 5px;
+	padding-left: 10px;
+}
+ html{
+	background-image:linear-gradient(to right,#247ba0,#ffffb5);;
+}
+body{
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+nav{
+	width: 1030;
+	height: 100px;
+	background-color: rgba(255,255,255,0.1);
+	border: transparent;
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+nav .logo{
+    float: left;
+    width: 270px;
+    height: 80px;
+    margin-left: 10px;
+    margin-top: 3px;
+    font-size: 60px;
+    line-height: 80px;
+    font-variant: small-caps;
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border: 6px solid white;
+    border-radius: 25px;
+    background-color: white;
+}
+nav ul{
+	float: left;
+	margin-left: 20px;
+}
+nav ul li{
+	display: inline-block;
+	line-height: 90px;
+	margin: 0 5px;
+}
+nav ul li a{
+	color: white;
+	font-size: 30px;
+	padding: 7px 13px;
+	border-radius: 10px;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+/*Toggel*/
+.container{
+	height: 100%;
+	width: 250px;
+	position: absolute;
+	background: transparent;
+	z-index: 1;
+	transition: 0.5s ease;
+	transform: translateX(-250px);
+	margin-top: 20px;
+}
+.container .head{
+	color: white;
+	font-size: 30px;
+	font-weight: bold;
+	padding: 30px;
+	text-transform: uppercase;
+	text-align: center;
+	background-color:transparent;
+}
+ol{
+	width: 100%;
+	list-style: none;
+}
+ol li{
+	display: block;
+	width: 100%;
+}
+ol li a{
+	color: whitesmoke;
+	padding: 15px 10px;
+	text-decoration: none;
+	display: block;
+	font-size: 20px;
+	letter-spacing: 1px;
+	position: relative;
+	transition: 0.3s;
+	overflow: hidden;
+	text-transform: capitalize;
+}
+ol li a i{
+	width: 70px;
+	font-size: 25px;
+	text-align: center;
+	padding-left: 30px;
+
+}
+ol li:hover a{
+	background:rgba(255,255,255,0.4);
+	border-radius: 0.3rem;
+	color: #247ba0;
+	letter-spacing: 3px;
+}
+ol li.active a{
+	color: white;
+}
+.selection{
+	-webkit-appearance: none;
+	visibility: hidden;
+	display: none;
+}
+span{
+	position: absolute;
+	right: -40px;
+	top: 15px;
+	height: 40px;
+	font-size: 25px;
+	border-radius: 2px;
+	color: #fff;
+	padding: 7px 8px;
+	cursor: pointer;
+	background: rgba(255,255,255,0.01);
+}
+#bars{
+	background:transparent;
+	
+}
+#check:checked ~ .container{
+	transform: translateX(0);
+}
+#check:checked ~ .container #bars{
+	display: none;
+}
+#check:checked ~ .table{
+	margin-left: 250px;
+}
+.active5:hover{
+	background:rgba(255,255,255,0.2);
+    transform: scale(1.5);
+    transition: transform .7s ease;
+    cursor: pointer;
+
+}
+.active6:hover{
+	background:rgba(255,255,255,0.2);
+    transform: scale(1.5);
+    transition: transform .7s ease;
+    cursor: pointer;
+
+}
+
+/*Tables*/
+
+.table{
+	padding-top: 50px;
+	padding-left: 20px;
+	transition: all .5s;
+	background: rgb(255,255,255,0.1);
+	padding: 2.5rem 2.5rem;
+	border-radius: 2rem;
+	margin-top: auto;
+	margin-left: -20px;
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+tbody tr:nth-child(even) {
+	background-color: rgba(255,255,255,0.4);
+	}
+.table div .selectsem{
+	font-size: 15px;
+	padding: 5px 5px 5px 5px;
+	border-radius: 1rem;
+	border-color: transparent;
+	background-color:rgba(255,255,255,0.6);
+	margin-left: 25px;
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+}
+
+.table table tr th{
+	padding-left: 30px;
+	padding-right: 30px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: transparent;
+	border: transparent;
+	border-collapse: collapse;
+	border-style:hidden;
+	font-size:18px;
+	text-align: center;
+}
+.table table tr td{
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: transparent;
+	border-style: hidden;
+	font-size:20px;
+	text-align: center;
+	font-family: 'DM Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.table .scroll{
+	overflow: auto;
+}
